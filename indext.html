@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Intelitest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #1e1e2f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #2c2c44;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        nav button:hover {
+            background: #44446a;
+        }
+
+        section {
+            display: none;
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1e1e2f;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🎮 Intelitest</h1>
+    <p>Juegos de lógica y test de conocimiento</p>
+</header>
+
+<nav>
+    <button onclick="mostrar('inicio')">Inicio</button>
+    <button onclick="mostrar('gato')">Gato</button>
+    <button onclick="mostrar('damas')">Damas</button>
+    <button onclick="mostrar('ajedrez')">Ajedrez</button>
+    <button onclick="mostrar('test')">Test</button>
+</nav>
+
+<section id="inicio" class="active">
+    <div class="card">
+        <h2>Bienvenido a Intelitest</h2>
+        <p>
+            Intelitest es una plataforma para entrenar tu mente jugando.
+            Aquí podrás jugar al gato, damas, ajedrez y poner a prueba
+            tu conocimiento general.
+        </p>
+    </div>
+</section>
+
+<section id="gato">
+    <div class="card">
+        <h2>🐱 Juego del Gato</h2>
+        <p>Aquí irá el juego del gato (3 en raya).</p>
+        <p>Próximamente: tablero interactivo.</p>
+    </div>
+</section>
+
+<section id="damas">
+    <div class="card">
+        <h2>⚪ Damas</h2>
+        <p>Aquí irá el juego de damas.</p>
+        <p>Podrás jugar contra otro jugador o la computadora.</p>
+    </div>
+</section>
+
+<section id="ajedrez">
+    <div class="card">
+        <h2>♟️ Ajedrez</h2>
+        <p>Aquí irá el juego de ajedrez.</p>
+        <p>Incluye movimientos legales y control de turnos.</p>
+    </div>
+</section>
+
+<section id="test">
+    <div class="card">
+        <h2>🧠 Test de Conocimiento General</h2>
+        <p>Ejemplo de pregunta:</p>
+        <p><strong>¿Cuál es la capital de Francia?</strong></p>
+        <button onclick="alert('Correcto 🎉')">París</button>
+        <button onclick="alert('Incorrecto ❌')">Madrid</button>
+        <button onclick="alert('Incorrecto ❌')">Roma</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Intelitest</p>
+</footer>
+
+<script>
+    function mostrar(id) {
+        const secciones = document.querySelectorAll("section");
+        secciones.forEach(sec => sec.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+    }
+</script>
+
+</body>
+</html>
